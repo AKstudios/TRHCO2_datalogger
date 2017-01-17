@@ -2222,6 +2222,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="2.54" y1="-5.715" x2="1.905" y2="-6.35" width="0.1524" layer="21"/>
 <wire x1="1.905" y1="-6.35" x2="-1.905" y2="-6.35" width="0.1524" layer="21"/>
 <wire x1="-2.54" y1="-4.445" x2="-2.54" y2="-5.715" width="0.1524" layer="21"/>
+<wire x1="-3.175" y1="5.715" x2="-3.175" y2="4.445" width="0.2032" layer="21"/>
 <pad name="1" x="-1.27" y="5.08" drill="1.016" diameter="1.8796" shape="octagon" rot="R270"/>
 <pad name="2" x="1.27" y="5.08" drill="1.016" diameter="1.8796" shape="octagon" rot="R270"/>
 <pad name="3" x="-1.27" y="2.54" drill="1.016" diameter="1.8796" shape="octagon" rot="R270"/>
@@ -5266,23 +5267,13 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <packages>
 <package name="K30-CO2-I2C">
 <wire x1="0" y1="0" x2="57.15" y2="0" width="0.127" layer="21"/>
-<wire x1="57.15" y1="0" x2="57.15" y2="2.794" width="0.127" layer="21"/>
-<wire x1="57.15" y1="2.794" x2="57.15" y2="50.8" width="0.127" layer="21"/>
+<wire x1="57.15" y1="0" x2="57.15" y2="50.8" width="0.127" layer="21"/>
 <wire x1="57.15" y1="50.8" x2="0" y2="50.8" width="0.127" layer="21"/>
 <wire x1="0" y1="50.8" x2="0" y2="0" width="0.127" layer="21"/>
-<pad name="SDA" x="36.83" y="2.794" drill="0.8" diameter="1.6764"/>
-<pad name="SCL" x="39.37" y="2.794" drill="0.8" diameter="1.6764"/>
-<pad name="5V" x="41.91" y="2.794" drill="0.8" diameter="1.6764"/>
-<pad name="GND" x="44.45" y="2.794" drill="0.8" diameter="1.6764"/>
-<wire x1="14.986" y1="46.736" x2="23.876" y2="44.196" width="0.127" layer="21"/>
-<wire x1="23.876" y1="44.196" x2="29.972" y2="46.482" width="0.127" layer="21" curve="73.002851"/>
-<wire x1="29.972" y1="46.482" x2="34.036" y2="47.752" width="0.127" layer="21" curve="-79.406886"/>
-<wire x1="34.036" y1="47.752" x2="43.688" y2="38.354" width="0.127" layer="21" curve="-43.773399"/>
-<wire x1="43.688" y1="38.354" x2="30.734" y2="9.144" width="0.127" layer="21" curve="-95.586893"/>
-<wire x1="30.734" y1="9.144" x2="6.858" y2="16.002" width="0.127" layer="21" curve="-68.632344"/>
-<wire x1="6.858" y1="16.002" x2="8.128" y2="22.86" width="0.127" layer="21" curve="-100.298871"/>
-<wire x1="8.128" y1="22.86" x2="13.716" y2="40.386" width="0.127" layer="21" curve="85.913007"/>
-<wire x1="13.716" y1="40.386" x2="14.986" y2="46.736" width="0.127" layer="21" curve="-73.164099"/>
+<pad name="SDA" x="37.592" y="2.794" drill="0.8" diameter="1.6764"/>
+<pad name="SCL" x="40.132" y="2.794" drill="0.8" diameter="1.6764"/>
+<pad name="5V" x="42.672" y="2.794" drill="0.8" diameter="1.6764"/>
+<pad name="GND" x="45.212" y="2.794" drill="0.8" diameter="1.6764"/>
 </package>
 </packages>
 <symbols>
@@ -6339,7 +6330,7 @@ Various common sizes : AA, AAA, 18650 (PRT-12895), 20mm coin cell and 12mm coin 
 <attribute name="NO_BOM" value="TRUE"/>
 </part>
 <part name="GND5" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="J3" library="SparkFun-Connectors" deviceset="USB" device="-MICROB">
+<part name="J3" library="SparkFun-Connectors" deviceset="USB" device="-MICROB" value="MicroUSB (5V)">
 <attribute name="MPN" value="CONN-09505"/>
 </part>
 <part name="RX" library="adafruit" deviceset="LED" device="CHIPLED_0805" value="Green">
@@ -6376,7 +6367,7 @@ Various common sizes : AA, AAA, 18650 (PRT-12895), 20mm coin cell and 12mm coin 
 <attribute name="MPN" value="FT231XQ-R"/>
 </part>
 <part name="U$3" library="K30-CO2-I2C" deviceset="K30-CO2-I2C" device=""/>
-<part name="JP1" library="SparkFun-Connectors" deviceset="USD-SOCKET" device="NEW"/>
+<part name="JP1" library="SparkFun-Connectors" deviceset="USD-SOCKET" device="NEW" value="MicroSD socket"/>
 <part name="DS3234" library="SparkFun-FreqCtrl" deviceset="DS3234" device=""/>
 <part name="GND3" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="SUPPLY2" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
@@ -6416,8 +6407,8 @@ Akram Ali</text>
 <instance part="GND1" gate="1" x="182.88" y="40.64"/>
 <instance part="SUPPLY1" gate="G$1" x="182.88" y="119.38"/>
 <instance part="SUPPLY3" gate="G$1" x="121.92" y="25.4"/>
-<instance part="R4" gate="G$1" x="246.38" y="66.04">
-<attribute name="MPN" x="246.38" y="66.04" size="1.778" layer="96" rot="R270" display="off"/>
+<instance part="R4" gate="G$1" x="251.46" y="66.04">
+<attribute name="MPN" x="251.46" y="66.04" size="1.778" layer="96" rot="R270" display="off"/>
 </instance>
 <instance part="R5" gate="G$1" x="248.92" y="101.6" rot="R90">
 <attribute name="MPN" x="248.92" y="101.6" size="1.778" layer="96" rot="R270" display="off"/>
@@ -6432,8 +6423,8 @@ Akram Ali</text>
 <attribute name="MPN" x="182.88" y="68.58" size="1.778" layer="96" rot="R270" display="off"/>
 </instance>
 <instance part="SUPPLY7" gate="G$1" x="254" y="114.3"/>
-<instance part="LED1" gate="G$1" x="261.62" y="66.04" rot="R90">
-<attribute name="MPN" x="261.62" y="66.04" size="1.778" layer="96" rot="R270" display="off"/>
+<instance part="LED1" gate="G$1" x="264.16" y="66.04" rot="R90">
+<attribute name="MPN" x="264.16" y="66.04" size="1.778" layer="96" rot="R270" display="off"/>
 </instance>
 <instance part="GND8" gate="1" x="271.78" y="53.34"/>
 <instance part="U8" gate="G$1" x="-30.48" y="35.56">
@@ -6556,7 +6547,7 @@ Akram Ali</text>
 <segment>
 <pinref part="LED1" gate="G$1" pin="C"/>
 <pinref part="GND8" gate="1" pin="GND"/>
-<wire x1="266.7" y1="66.04" x2="271.78" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="269.24" y1="66.04" x2="271.78" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="271.78" y1="66.04" x2="271.78" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -6978,7 +6969,7 @@ Akram Ali</text>
 <segment>
 <pinref part="R4" gate="G$1" pin="2"/>
 <pinref part="LED1" gate="G$1" pin="A"/>
-<wire x1="251.46" y1="66.04" x2="259.08" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="66.04" x2="261.62" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$25" class="0">
@@ -7091,22 +7082,6 @@ Akram Ali</text>
 <wire x1="182.88" y1="-35.56" x2="182.88" y2="-43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="D4" class="0">
-<segment>
-<pinref part="DS3234" gate="G$1" pin="INT/SQW"/>
-<wire x1="139.7" y1="-55.88" x2="134.62" y2="-55.88" width="0.1524" layer="91"/>
-<label x="134.62" y="-55.88" size="1.778" layer="95" rot="R180"/>
-<pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="134.62" y1="-55.88" x2="129.54" y2="-60.96" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$9" class="0">
-<segment>
-<pinref part="R4" gate="G$1" pin="1"/>
-<pinref part="U1" gate="G$1" pin="PD7"/>
-<wire x1="236.22" y1="63.5" x2="241.3" y2="66.04" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="D9" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="PB1"/>
@@ -7121,6 +7096,12 @@ Akram Ali</text>
 </net>
 <net name="D8" class="0">
 <segment>
+<pinref part="U1" gate="G$1" pin="PB0"/>
+<wire x1="236.22" y1="58.42" x2="238.76" y2="58.42" width="0.1524" layer="91"/>
+<label x="241.3" y="60.96" size="1.778" layer="95" xref="yes"/>
+<wire x1="238.76" y1="58.42" x2="241.3" y2="60.96" width="0.1524" layer="91"/>
+</segment>
+<segment>
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="119.38" y1="-60.96" x2="114.3" y2="-60.96" width="0.1524" layer="91"/>
 <label x="114.3" y="-60.96" size="1.778" layer="95" rot="R180" xref="yes"/>
@@ -7128,9 +7109,18 @@ Akram Ali</text>
 </net>
 <net name="N$1" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PB0"/>
-<wire x1="236.22" y1="58.42" x2="238.76" y2="58.42" width="0.1524" layer="91"/>
-<label x="241.3" y="60.96" size="1.778" layer="95" xref="yes"/>
+<pinref part="U1" gate="G$1" pin="PD7"/>
+<wire x1="236.22" y1="63.5" x2="238.76" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="R4" gate="G$1" pin="1"/>
+<wire x1="238.76" y1="66.04" x2="246.38" y2="66.04" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="DS3234" gate="G$1" pin="INT/SQW"/>
+<pinref part="R1" gate="G$1" pin="2"/>
+<wire x1="139.7" y1="-55.88" x2="134.62" y2="-55.88" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="-55.88" x2="129.54" y2="-60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
