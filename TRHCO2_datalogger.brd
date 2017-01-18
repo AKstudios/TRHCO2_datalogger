@@ -9,6 +9,20 @@
 <grid distance="2" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="1" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
@@ -142,11 +156,11 @@
 </layers>
 <board>
 <plain>
-<text x="56.388" y="18.5166" size="0.8128" layer="122" font="vector" ratio="14" rot="MR270" align="center-left">T/RH/CO2 datalogger</text>
-<text x="51.0032" y="4.9784" size="0.8128" layer="16" font="vector" ratio="14" rot="SMR90">Designed by
+<text x="43.307" y="51.8668" size="0.8128" layer="122" font="vector" ratio="14" rot="MR180" align="center-left">T/RH/CO2 datalogger</text>
+<text x="56.6928" y="46.228" size="0.8128" layer="16" font="vector" ratio="14" rot="SMR0">Designed by
 Akram Ali
 </text>
-<text x="55.499" y="14.1986" size="0.508" layer="122" font="vector" rot="MR270">v0.1  |  January 2017</text>
+<text x="56.6674" y="50.419" size="0.508" layer="122" font="vector" rot="MR0">v0.1  |  January 2017</text>
 <text x="3.4036" y="50.5968" size="0.508" layer="121" font="vector" rot="R180">MISO</text>
 <text x="4.1148" y="48.0568" size="0.508" layer="121" font="vector" rot="R180">SCK</text>
 <text x="4.064" y="45.3644" size="0.508" layer="121" font="vector" rot="R180">RST</text>
@@ -341,6 +355,8 @@ Akram Ali
 <wire x1="15.4432" y1="11.7856" x2="15.9512" y2="11.2268" width="0.0254" layer="20" curve="-95.45259"/>
 <text x="23.0124" y="52.4256" size="0.508" layer="121" font="vector">MicroUSB
 5V 500mA</text>
+<text x="54.7116" y="8.5344" size="1.778" layer="121" font="vector">+</text>
+<text x="56.134" y="17.3736" size="1.778" layer="121" font="vector" rot="R90">-</text>
 </plain>
 <libraries>
 <library name="SparkFun-Passives">
@@ -504,6 +520,28 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="0.635" y="15.875" size="1.27" layer="51" font="vector" ratio="10" align="center-left">Pressed</text>
 <text x="0.635" y="17.78" size="1.27" layer="51" font="vector" ratio="10" align="center-left">Locked</text>
 <text x="0.635" y="20.955" size="1.27" layer="51" font="vector" ratio="10" align="center-left">Unlocked</text>
+</package>
+<package name="1X02">
+<wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="0.635" y1="1.27" x2="1.27" y2="0.635" width="0.2032" layer="21"/>
+<wire x1="1.27" y1="-0.635" x2="0.635" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="1.27" y1="0.635" x2="1.905" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="1.905" y1="1.27" x2="3.175" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="3.175" y1="1.27" x2="3.81" y2="0.635" width="0.2032" layer="21"/>
+<wire x1="3.81" y1="-0.635" x2="3.175" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="3.175" y1="-1.27" x2="1.905" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="1.905" y1="-1.27" x2="1.27" y2="-0.635" width="0.2032" layer="21"/>
+<wire x1="-1.27" y1="0.635" x2="-1.27" y2="-0.635" width="0.2032" layer="21"/>
+<wire x1="-0.635" y1="1.27" x2="-1.27" y2="0.635" width="0.2032" layer="21"/>
+<wire x1="-1.27" y1="-0.635" x2="-0.635" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="0.635" y1="-1.27" x2="-0.635" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="3.81" y1="0.635" x2="3.81" y2="-0.635" width="0.2032" layer="21"/>
+<pad name="1" x="0" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<pad name="2" x="2.54" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<text x="-1.3462" y="1.8288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-1.27" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="2.286" y1="-0.254" x2="2.794" y2="0.254" layer="51"/>
+<rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
 </package>
 </packages>
 </library>
@@ -1500,6 +1538,10 @@ design rules under a new name.</description>
 <attribute name="MPN" value="RC0805JR-0747RL" x="45.6692" y="34.4932" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="45.0088" y="35.5854" size="0.508" layer="121" font="vector"/>
 </element>
+<element name="5V,500MA" library="SparkFun-Connectors" package="1X02" value="" x="55.2196" y="14.8844" smashed="yes" rot="R270">
+<attribute name="NAME" x="57.0484" y="15.7226" size="0.6096" layer="121" font="vector" rot="R270"/>
+<attribute name="VALUE" x="52.0446" y="16.1544" size="1.27" layer="27" rot="R270"/>
+</element>
 </elements>
 <signals>
 <signal name="GND">
@@ -1590,6 +1632,7 @@ design rules under a new name.</description>
 <via x="13.0556" y="35.4584" extent="1-16" drill="0.254"/>
 <via x="37.084" y="38.2016" extent="1-16" drill="0.254"/>
 <via x="23.4696" y="32.3596" extent="1-16" drill="0.254"/>
+<contactref element="5V,500MA" pad="1"/>
 </signal>
 <signal name="VCC">
 <contactref element="R5" pad="2"/>
@@ -1743,6 +1786,9 @@ design rules under a new name.</description>
 <via x="17.4244" y="23.5712" extent="1-16" drill="0.254" diameter="0.127"/>
 <wire x1="17.4244" y1="23.5712" x2="26.2636" y2="23.5712" width="0.4064" layer="16"/>
 <wire x1="26.2636" y1="23.5712" x2="43.6372" y2="6.1976" width="0.4064" layer="16" curve="-90"/>
+<contactref element="5V,500MA" pad="2"/>
+<wire x1="55.2196" y1="12.3444" x2="49.784" y2="12.3444" width="0.8128" layer="16"/>
+<wire x1="49.784" y1="12.3444" x2="43.6372" y2="6.1976" width="0.8128" layer="16" curve="90"/>
 </signal>
 <signal name="MISO">
 <contactref element="J2" pad="1"/>
