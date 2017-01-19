@@ -5929,13 +5929,23 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <packages>
 <package name="K30-CO2-I2C">
 <wire x1="0" y1="0" x2="57.15" y2="0" width="0.127" layer="21"/>
-<wire x1="57.15" y1="0" x2="57.15" y2="50.8" width="0.127" layer="21"/>
+<wire x1="57.15" y1="0" x2="57.15" y2="2.794" width="0.127" layer="21"/>
+<wire x1="57.15" y1="2.794" x2="57.15" y2="50.8" width="0.127" layer="21"/>
 <wire x1="57.15" y1="50.8" x2="0" y2="50.8" width="0.127" layer="21"/>
 <wire x1="0" y1="50.8" x2="0" y2="0" width="0.127" layer="21"/>
-<pad name="SDA" x="37.592" y="2.794" drill="0.8" diameter="1.6764"/>
-<pad name="SCL" x="40.132" y="2.794" drill="0.8" diameter="1.6764"/>
-<pad name="5V" x="42.672" y="2.794" drill="0.8" diameter="1.6764"/>
-<pad name="GND" x="45.212" y="2.794" drill="0.8" diameter="1.6764"/>
+<pad name="SDA" x="36.83" y="2.794" drill="0.8" diameter="1.6764"/>
+<pad name="SCL" x="39.37" y="2.794" drill="0.8" diameter="1.6764"/>
+<pad name="5V" x="41.91" y="2.794" drill="0.8" diameter="1.6764"/>
+<pad name="GND" x="44.45" y="2.794" drill="0.8" diameter="1.6764"/>
+<wire x1="14.986" y1="46.736" x2="23.876" y2="44.196" width="0.127" layer="21"/>
+<wire x1="23.876" y1="44.196" x2="29.972" y2="46.482" width="0.127" layer="21" curve="73.002851"/>
+<wire x1="29.972" y1="46.482" x2="34.036" y2="47.752" width="0.127" layer="21" curve="-79.406886"/>
+<wire x1="34.036" y1="47.752" x2="43.688" y2="38.354" width="0.127" layer="21" curve="-43.773399"/>
+<wire x1="43.688" y1="38.354" x2="30.734" y2="9.144" width="0.127" layer="21" curve="-95.586893"/>
+<wire x1="30.734" y1="9.144" x2="6.858" y2="16.002" width="0.127" layer="21" curve="-68.632344"/>
+<wire x1="6.858" y1="16.002" x2="8.128" y2="22.86" width="0.127" layer="21" curve="-100.298871"/>
+<wire x1="8.128" y1="22.86" x2="13.716" y2="40.386" width="0.127" layer="21" curve="85.913007"/>
+<wire x1="13.716" y1="40.386" x2="14.986" y2="46.736" width="0.127" layer="21" curve="-73.164099"/>
 </package>
 </packages>
 <symbols>
@@ -7030,11 +7040,15 @@ Various common sizes : AA, AAA, 18650 (PRT-12895), 20mm coin cell and 12mm coin 
 </part>
 <part name="U$3" library="K30-CO2-I2C" deviceset="K30-CO2-I2C" device=""/>
 <part name="JP1" library="SparkFun-Connectors" deviceset="USD-SOCKET" device="NEW" value="MicroSD socket"/>
-<part name="DS3234" library="SparkFun-FreqCtrl" deviceset="DS3234" device=""/>
+<part name="DS3234" library="SparkFun-FreqCtrl" deviceset="DS3234" device="">
+<attribute name="MPN" value="DS3234S#"/>
+</part>
 <part name="GND3" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="SUPPLY2" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="U1" library="ATMEGA328P-MU" deviceset="ATMEGA328P-MU" device=""/>
-<part name="BAT1" library="SparkFun-Electromechanical" deviceset="BATTERY" device="12MM"/>
+<part name="BAT1" library="SparkFun-Electromechanical" deviceset="BATTERY" device="12MM">
+<attribute name="MPN" value="3000"/>
+</part>
 <part name="C2" library="SparkFun-Passives" deviceset="CAP" device="0805" value="22pF">
 <attribute name="MPN" value="AC0805KRX7R9BB104"/>
 </part>
@@ -7151,11 +7165,15 @@ Akram Ali</text>
 </instance>
 <instance part="U$3" gate="G$1" x="88.9" y="99.06"/>
 <instance part="JP1" gate="G$1" x="251.46" y="-5.08"/>
-<instance part="DS3234" gate="G$1" x="154.94" y="-48.26"/>
+<instance part="DS3234" gate="G$1" x="154.94" y="-48.26">
+<attribute name="MPN" x="154.94" y="-48.26" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="GND3" gate="1" x="182.88" y="-71.12"/>
 <instance part="SUPPLY2" gate="G$1" x="116.84" y="-30.48"/>
 <instance part="U1" gate="G$1" x="213.36" y="76.2"/>
-<instance part="BAT1" gate="G$1" x="182.88" y="-48.26" rot="R270"/>
+<instance part="BAT1" gate="G$1" x="182.88" y="-48.26" rot="R270">
+<attribute name="MPN" x="182.88" y="-48.26" size="1.778" layer="96" rot="R270" display="off"/>
+</instance>
 <instance part="C2" gate="G$1" x="116.84" y="-40.64" rot="R180">
 <attribute name="MPN" x="116.84" y="-40.64" size="1.778" layer="96" rot="R90" display="off"/>
 </instance>
