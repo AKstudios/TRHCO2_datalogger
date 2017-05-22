@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.2.0">
+<eagle version="8.2.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -224,7 +224,7 @@
 </deviceset>
 </devicesets>
 </library>
-<library name="adafruit" urn="urn:adsk.eagle:library:420">
+<library name="adafruit">
 <packages>
 <package name="1206">
 <description>&lt;b&gt;CHICAGO MINIATURE LAMP, INC.&lt;/b&gt;&lt;p&gt;
@@ -4044,6 +4044,21 @@ type 0309, grid 2.5 mm</description>
 <rectangle x1="3.175" y1="-0.3048" x2="4.0386" y2="0.3048" layer="21"/>
 <rectangle x1="-4.0386" y1="-0.3048" x2="-3.175" y2="0.3048" layer="21"/>
 </package>
+<package name="FIDUCIAL_1MM">
+<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" stop="no" cream="no"/>
+<polygon width="0.127" layer="29">
+<vertex x="-1" y="0" curve="90"/>
+<vertex x="0" y="-1" curve="90"/>
+<vertex x="1" y="0" curve="90"/>
+<vertex x="0" y="1" curve="90"/>
+</polygon>
+<polygon width="0.127" layer="41">
+<vertex x="-1" y="0" curve="90"/>
+<vertex x="0" y="-1" curve="90"/>
+<vertex x="1" y="0" curve="90"/>
+<vertex x="0" y="1" curve="90"/>
+</polygon>
+</package>
 </packages>
 <symbols>
 <symbol name="LED">
@@ -4095,6 +4110,9 @@ type 0309, grid 2.5 mm</description>
 <text x="-3.81" y="-3.302" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+</symbol>
+<symbol name="DOT">
+<circle x="0" y="0" radius="2.54" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -5768,6 +5786,20 @@ Source: http://www.osram.convergy.de/</description>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="FIDUCIAL">
+<description>For use by pick and place machines to calibrate the vision/machine, 1mm
+&lt;p&gt;By microbuilder.eu&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="DOT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="FIDUCIAL_1MM">
 <technologies>
 <technology name=""/>
 </technologies>
@@ -15108,7 +15140,7 @@ http://www.tag-connect.com</description>
 <part name="SUPPLY1" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="SUPPLY3" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="SUPPLY7" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
-<part name="LED1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="LED" device="CHIPLED_0805" value="Blue">
+<part name="LED1" library="adafruit" deviceset="LED" device="CHIPLED_0805" value="Blue">
 <attribute name="MPN" value="150080BS75000"/>
 </part>
 <part name="GND8" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
@@ -15127,10 +15159,10 @@ http://www.tag-connect.com</description>
 <part name="J3" library="SparkFun-Connectors" deviceset="USB" device="-MICROB" value="MicroUSB (5V)">
 <attribute name="MPN" value="CONN-09505"/>
 </part>
-<part name="RX" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="LED" device="CHIPLED_0805" value="Yellow">
+<part name="RX" library="adafruit" deviceset="LED" device="CHIPLED_0805" value="Yellow">
 <attribute name="MPN" value="LG R971-KN-1"/>
 </part>
-<part name="TX" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="LED" device="CHIPLED_0805" value="Yellow">
+<part name="TX" library="adafruit" deviceset="LED" device="CHIPLED_0805" value="Yellow">
 <attribute name="MPN" value="LH R974-LP-1"/>
 </part>
 <part name="GND7" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
@@ -15151,28 +15183,28 @@ http://www.tag-connect.com</description>
 </part>
 <part name="GND4" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="SUPPLY4" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
-<part name="C14" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="C-US" device="C0402" value="0.1uF"/>
-<part name="R16" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0402" value="10K"/>
-<part name="R5" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0402" value="10K"/>
-<part name="R6" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0402" value="10K"/>
-<part name="C12" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="C-US" device="C0402" value="0.1uF"/>
-<part name="R4" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0402" value="47"/>
-<part name="R13" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0402" value="10K"/>
-<part name="C15" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="C-US" device="C0402" value="1uF"/>
+<part name="C14" library="adafruit" deviceset="C-US" device="C0402" value="0.1uF"/>
+<part name="R16" library="adafruit" deviceset="R-US_" device="R0402" value="10K"/>
+<part name="R5" library="adafruit" deviceset="R-US_" device="R0402" value="10K"/>
+<part name="R6" library="adafruit" deviceset="R-US_" device="R0402" value="10K"/>
+<part name="C12" library="adafruit" deviceset="C-US" device="C0402" value="0.1uF"/>
+<part name="R4" library="adafruit" deviceset="R-US_" device="R0402" value="47"/>
+<part name="R13" library="adafruit" deviceset="R-US_" device="R0402" value="10K"/>
+<part name="C15" library="adafruit" deviceset="C-US" device="C0402" value="1uF"/>
 <part name="SUPPLY5" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
-<part name="R1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0402" value="10K"/>
-<part name="R2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0402" value="10K"/>
-<part name="C3" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="C-US" device="C0402" value="22pF"/>
-<part name="C2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="C-US" device="C0402" value="0.1uF"/>
+<part name="R1" library="adafruit" deviceset="R-US_" device="R0402" value="10K"/>
+<part name="R2" library="adafruit" deviceset="R-US_" device="R0402" value="10K"/>
+<part name="C3" library="adafruit" deviceset="C-US" device="C0402" value="22pF"/>
+<part name="C2" library="adafruit" deviceset="C-US" device="C0402" value="0.1uF"/>
 <part name="GND6" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND19" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="C4" library="SparkFun-Capacitors" deviceset="CAP" device="0805" value="1uF">
 <attribute name="MPN" value="CC0805KKX7R7BB105"/>
 </part>
-<part name="R3" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0402" value="27"/>
-<part name="R9" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0402" value="27"/>
-<part name="R10" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0402" value="47"/>
-<part name="R12" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0402" value="47"/>
+<part name="R3" library="adafruit" deviceset="R-US_" device="R0402" value="27"/>
+<part name="R9" library="adafruit" deviceset="R-US_" device="R0402" value="27"/>
+<part name="R10" library="adafruit" deviceset="R-US_" device="R0402" value="47"/>
+<part name="R12" library="adafruit" deviceset="R-US_" device="R0402" value="47"/>
 <part name="FRAME1" library="SparkFun-Retired" deviceset="FRAME-A3" device=""/>
 <part name="GND5" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="U4" library="microbuilder" deviceset="VREG_TPS6103X" device="" value="TPS61090RSAR"/>
@@ -15230,11 +15262,14 @@ http://www.tag-connect.com</description>
 <part name="U6" library="K30-CO2-I2C" deviceset="K30-CO2-I2C" device=""/>
 <part name="Y2" library="Adafruit Feather 32u4 Bluefruit LE" deviceset="SPARKFUN_RESONATOR" device="SMD"/>
 <part name="D1" library="Adafruit Feather 32u4 Bluefruit LE" deviceset="MICROBUILDER_DIODE-SCHOTTKY" device="SOD-123"/>
-<part name="C5" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="C-US" device="C0402" value="0.1uF"/>
-<part name="C7" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="C-US" device="C0402" value="0.1uF"/>
+<part name="C5" library="adafruit" deviceset="C-US" device="C0402" value="0.1uF"/>
+<part name="C7" library="adafruit" deviceset="C-US" device="C0402" value="0.1uF"/>
 <part name="D2" library="Adafruit Feather 32u4 Bluefruit LE" deviceset="MICROBUILDER_DIODE-SCHOTTKY" device="SOD-123"/>
 <part name="JP2" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NO" device="_NO-SILK"/>
 <part name="TC1" library="TagConnect" deviceset="TC2030-IDC" device="-NL"/>
+<part name="U$1" library="adafruit" deviceset="FIDUCIAL" device=""/>
+<part name="U$2" library="adafruit" deviceset="FIDUCIAL" device=""/>
+<part name="U$3" library="adafruit" deviceset="FIDUCIAL" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -15245,7 +15280,7 @@ http://www.tag-connect.com</description>
 <text x="250.444" y="-114.808" size="2.54" layer="94" font="vector" ratio="10">Akram Ali</text>
 <text x="-66.04" y="119.38" size="3.81" layer="94">USB + FTDI</text>
 <text x="134.62" y="86.36" size="1.778" layer="97">0x44</text>
-<text x="121.92" y="43.18" size="3.81" layer="94">CO2</text>
+<text x="157.48" y="38.1" size="3.81" layer="94">CO2</text>
 <text x="254" y="-38.1" size="3.81" layer="94">MicroSD card</text>
 <text x="248.92" y="30.48" size="3.81" layer="94">RTC</text>
 <text x="247.396" y="-104.648" size="2.54" layer="94" font="vector" ratio="10">v0.3 - May 2017</text>
@@ -15269,6 +15304,7 @@ R3 = 1.1Mohm for 3.3V</text>
 CONVERTER</text>
 <text x="124.46" y="-27.94" size="3.81" layer="94">Battery
 Charger</text>
+<text x="55.88" y="35.56" size="3.81" layer="94">TagConnect ISP</text>
 </plain>
 <instances>
 <instance part="U7" gate="G$1" x="129.54" y="99.06">
@@ -15335,9 +15371,9 @@ Charger</text>
 <instance part="C3" gate="G$1" x="215.9" y="15.24"/>
 <instance part="C2" gate="G$1" x="152.4" y="86.36"/>
 <instance part="GND6" gate="1" x="129.54" y="76.2"/>
-<instance part="GND19" gate="1" x="109.22" y="17.78"/>
-<instance part="C4" gate="G$1" x="109.22" y="27.94" rot="R180">
-<attribute name="MPN" x="109.22" y="27.94" size="1.778" layer="96" rot="R90" display="off"/>
+<instance part="GND19" gate="1" x="144.78" y="12.7"/>
+<instance part="C4" gate="G$1" x="144.78" y="22.86" rot="R180">
+<attribute name="MPN" x="144.78" y="22.86" size="1.778" layer="96" rot="R90" display="off"/>
 </instance>
 <instance part="R3" gate="G$1" x="-27.94" y="86.36" rot="R180"/>
 <instance part="R9" gate="G$1" x="-27.94" y="83.82" rot="R180"/>
@@ -15400,14 +15436,17 @@ Charger</text>
 <instance part="U$58" gate="G$1" x="81.28" y="-20.32"/>
 <instance part="U5" gate="G$1" x="132.08" y="-58.42"/>
 <instance part="S2" gate="1" x="203.2" y="-58.42" rot="R270"/>
-<instance part="U6" gate="G$1" x="127" y="27.94"/>
+<instance part="U6" gate="G$1" x="162.56" y="22.86"/>
 <instance part="Y2" gate="G$1" x="208.28" y="73.66"/>
 <instance part="D1" gate="G$1" x="-33.02" y="-81.28"/>
 <instance part="C5" gate="G$1" x="-48.26" y="7.62"/>
 <instance part="C7" gate="G$1" x="-27.94" y="104.14"/>
 <instance part="D2" gate="G$1" x="-10.16" y="121.92"/>
 <instance part="JP2" gate="G$1" x="193.04" y="-60.96" rot="R90"/>
-<instance part="TC1" gate="A" x="68.58" y="50.8"/>
+<instance part="TC1" gate="A" x="73.66" y="25.4"/>
+<instance part="U$1" gate="G$1" x="213.36" y="-91.44"/>
+<instance part="U$2" gate="G$1" x="220.98" y="-91.44"/>
+<instance part="U$3" gate="G$1" x="228.6" y="-91.44"/>
 </instances>
 <busses>
 </busses>
@@ -15533,10 +15572,10 @@ Charger</text>
 </segment>
 <segment>
 <pinref part="C4" gate="G$1" pin="1"/>
-<wire x1="114.3" y1="22.86" x2="109.22" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="17.78" x2="144.78" y2="17.78" width="0.1524" layer="91"/>
 <pinref part="GND19" gate="1" pin="GND"/>
-<wire x1="109.22" y1="22.86" x2="109.22" y2="20.32" width="0.1524" layer="91"/>
-<junction x="109.22" y="22.86"/>
+<wire x1="144.78" y1="17.78" x2="144.78" y2="15.24" width="0.1524" layer="91"/>
+<junction x="144.78" y="17.78"/>
 <pinref part="U6" gate="G$1" pin="GND"/>
 </segment>
 <segment>
@@ -15655,8 +15694,8 @@ Charger</text>
 </segment>
 <segment>
 <pinref part="TC1" gate="A" pin="6"/>
-<wire x1="60.96" y1="53.34" x2="58.42" y2="53.34" width="0.1524" layer="91"/>
-<label x="48.26" y="53.34" size="1.778" layer="95"/>
+<wire x1="66.04" y1="27.94" x2="63.5" y2="27.94" width="0.1524" layer="91"/>
+<label x="53.34" y="27.94" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -15753,8 +15792,8 @@ Charger</text>
 <label x="105.41" y="91.44" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="139.7" y1="22.86" x2="144.78" y2="22.86" width="0.1524" layer="91"/>
-<label x="144.78" y="22.86" size="1.778" layer="95" xref="yes"/>
+<wire x1="175.26" y1="17.78" x2="180.34" y2="17.78" width="0.1524" layer="91"/>
+<label x="180.34" y="17.78" size="1.778" layer="95" xref="yes"/>
 <pinref part="U6" gate="G$1" pin="SCL"/>
 </segment>
 </net>
@@ -15774,8 +15813,8 @@ Charger</text>
 <label x="105.41" y="106.68" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="139.7" y1="33.02" x2="144.78" y2="33.02" width="0.1524" layer="91"/>
-<label x="144.78" y="33.02" size="1.778" layer="95" xref="yes"/>
+<wire x1="175.26" y1="27.94" x2="180.34" y2="27.94" width="0.1524" layer="91"/>
+<label x="180.34" y="27.94" size="1.778" layer="95" xref="yes"/>
 <pinref part="U6" gate="G$1" pin="SDA"/>
 </segment>
 </net>
@@ -15813,8 +15852,8 @@ Charger</text>
 </segment>
 <segment>
 <pinref part="TC1" gate="A" pin="1"/>
-<wire x1="76.2" y1="48.26" x2="78.74" y2="48.26" width="0.1524" layer="91"/>
-<label x="78.74" y="48.26" size="1.778" layer="95"/>
+<wire x1="81.28" y1="22.86" x2="83.82" y2="22.86" width="0.1524" layer="91"/>
+<label x="83.82" y="22.86" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SCK" class="0">
@@ -15840,8 +15879,8 @@ Charger</text>
 </segment>
 <segment>
 <pinref part="TC1" gate="A" pin="3"/>
-<wire x1="76.2" y1="50.8" x2="78.74" y2="50.8" width="0.1524" layer="91"/>
-<label x="78.74" y="50.8" size="1.778" layer="95"/>
+<wire x1="81.28" y1="25.4" x2="83.82" y2="25.4" width="0.1524" layer="91"/>
+<label x="83.82" y="25.4" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RESET" class="0">
@@ -15860,8 +15899,8 @@ Charger</text>
 </segment>
 <segment>
 <pinref part="TC1" gate="A" pin="5"/>
-<wire x1="76.2" y1="53.34" x2="78.74" y2="53.34" width="0.1524" layer="91"/>
-<label x="78.74" y="53.34" size="1.778" layer="95"/>
+<wire x1="81.28" y1="27.94" x2="83.82" y2="27.94" width="0.1524" layer="91"/>
+<label x="83.82" y="27.94" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MOSI" class="0">
@@ -15884,8 +15923,8 @@ Charger</text>
 </segment>
 <segment>
 <pinref part="TC1" gate="A" pin="4"/>
-<wire x1="60.96" y1="50.8" x2="58.42" y2="50.8" width="0.1524" layer="91"/>
-<label x="48.26" y="50.8" size="1.778" layer="95"/>
+<wire x1="66.04" y1="25.4" x2="63.5" y2="25.4" width="0.1524" layer="91"/>
+<label x="53.34" y="25.4" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="DTR" class="0">
@@ -16189,12 +16228,12 @@ Charger</text>
 <junction x="17.78" y="17.78"/>
 </segment>
 <segment>
-<wire x1="114.3" y1="33.02" x2="109.22" y2="33.02" width="0.1524" layer="91"/>
-<label x="106.68" y="33.02" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="149.86" y1="27.94" x2="144.78" y2="27.94" width="0.1524" layer="91"/>
+<label x="142.24" y="27.94" size="1.778" layer="95" rot="R180" xref="yes"/>
 <pinref part="C4" gate="G$1" pin="2"/>
-<wire x1="109.22" y1="33.02" x2="106.68" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="30.48" x2="109.22" y2="33.02" width="0.1524" layer="91"/>
-<junction x="109.22" y="33.02"/>
+<wire x1="144.78" y1="27.94" x2="142.24" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="25.4" x2="144.78" y2="27.94" width="0.1524" layer="91"/>
+<junction x="144.78" y="27.94"/>
 <pinref part="U6" gate="G$1" pin="5V"/>
 </segment>
 </net>
@@ -16403,8 +16442,8 @@ Charger</text>
 </segment>
 <segment>
 <pinref part="TC1" gate="A" pin="2"/>
-<wire x1="60.96" y1="48.26" x2="58.42" y2="48.26" width="0.1524" layer="91"/>
-<label x="48.26" y="48.26" size="1.778" layer="95"/>
+<wire x1="66.04" y1="22.86" x2="63.5" y2="22.86" width="0.1524" layer="91"/>
+<label x="53.34" y="22.86" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
