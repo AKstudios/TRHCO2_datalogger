@@ -177,11 +177,18 @@ void loop()
     CO2ppm = _CO2ppm;
 
   Serial.print("Temperature: ");
-  Serial.println(t);
+  Serial.print(t);
+  Serial.println(" C");
+  
   Serial.print("Humidity: ");
-  Serial.println(h); 
+  Serial.print(h); 
+  Serial.println(" %");
+  
   Serial.print("CO2: ");
-  Serial.println(CO2ppm);
+  Serial.print(CO2ppm);
+  Serial.println(" ppm");
+  
+  Serial.println();
   delay(50); // give some delay to ensure CO2 data is properly received from sensor
   
 
