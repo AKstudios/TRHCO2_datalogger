@@ -1,5 +1,6 @@
 // OSBSS T/RH/CO2 data logger based on SenseAir K-30 1% CO2 sensor and Sensirion SHT35 sensor
-// Last edited on February 14, 2017 - Arduino IDE 1.8.1, Latest SdFat library
+// read interval stored in config.txt
+// Last edited on June 15, 2017 - Arduino IDE 1.8.2, Latest SdFat library
 
 #include <EEPROM.h>
 #include <Wire.h>
@@ -13,6 +14,7 @@
 long interval = 30;  // set logging interval in SECONDS, eg: set 300 seconds for an interval of 5 mins
 int dayStart = 14, hourStart = 13, minStart = 41;    // define logger start time: day of the month, hour, minute
 char filename[15] = "data.csv";    // Set filename Format: "12345678.123". Cannot be more than 8 characters in length, contain spaces or begin with a number
+int data; // read each byte of data from sd card and store here
 
 // Global objects and variables   ******************************
 Adafruit_SHT31 sht31 = Adafruit_SHT31();
@@ -39,7 +41,10 @@ ISR(PCINT0_vect)  // Interrupt Vector Routine to be executed when pin 8 receives
 void setup()
 {
   Serial.begin(19200); // open serial at 19200 bps
-  Serial.println("setup");
+  Serial.flush(); // clear the buffer
+  delay(5);
+  
+  Serial.println("Setup");
   delay(10);
   
   pinMode(LED, OUTPUT); // set output pins
@@ -80,9 +85,59 @@ void setup()
     }
   }
   
+  if(!myFile.open("config.txt", O_READ))  // open config.txt and read logging interval
+  {
+    Serial.println("config.txt file error. Setting default interval to 30 seconds.");
+    delay(50);
+  }
+
+  else
+  {
+    char interval_array[5]; // should be able to store 5 digit maximum (86,400 seconds = 24 hours)
+    int i=0; // index of array
+    long _interval;  // logging interval read from file
+    boolean error_flag = false;
+    
+    while(1)
+    {
+      data = myFile.read();  // read next byte in file
+      
+      if(data < 0)  // if no bytes remaining, myFile.read() returns -1
+        break;      // exit loop
+
+      if(data >= 48 && data <= 57) // check if data is digits ONLY (between 0-9). ASCII value of 0 = 48; 9 = 57
+        interval_array[i] = (char)data;  // store digit in char array
+      else  // if any other charecter other than numbers 0-9
+      {
+        error_flag = true;
+        break;
+      }
+      
+      i++; // increment index of array by 1
+      if(i>5)  // only read the first 5 digits in file. Ignore all other values
+        break;
+    }
+    myFile.close();  // close file - very important!
+    sscanf(interval_array, "%ld", &_interval);  // "%ld" will convert array to long (use "%d" to convert to int)
+    
+    if(_interval <= 0 || _interval > 86400 || error_flag == true)
+    {
+      Serial.println("Incorrect format or out of bounds. Must be a number between 1 and 86,400 seconds. Setting default interval to 30 seconds.");
+      delay(50);
+    }
+    else
+    {
+      interval = _interval;
+      Serial.print("New logging interval set: ");
+      Serial.println(interval);
+      delay(50);
+    }
+  }
   RTC.setNewAlarm(interval);
   chip.sleepInterruptSetup();    // setup sleep function on the ATmega328p. Power-down mode is used here
+  delay(10);
 }
+
 
 // loop ****************************************************************
 void loop()
