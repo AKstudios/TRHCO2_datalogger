@@ -1184,19 +1184,19 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 </element>
 <element name="LED1" library="adafruit" package="CHIPLED_0805" value="Blue" x="37.5562" y="49.7432" smashed="yes" rot="R270">
 <attribute name="MPN" value="150080BS75000" x="37.5562" y="49.7432" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="33.5382" y="49.5832" size="0.6096" layer="25" font="vector"/>
+<attribute name="NAME" x="36.5862" y="48.3132" size="0.6096" layer="25" font="vector"/>
 </element>
 <element name="U8" library="linear" library_urn="urn:adsk.eagle:library:262" package="SOT23" value="MCP1703/3.3V" x="21.1992" y="28.7124" smashed="yes" rot="R90">
 <attribute name="MPN" value="MCP1703T-2502E/CB" x="21.1992" y="28.7124" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="21.5766" y="31.0322" size="0.6096" layer="25" font="vector" rot="R180"/>
+<attribute name="NAME" x="19.0942" y="28.2074" size="0.6096" layer="25" font="vector" rot="R90"/>
 </element>
 <element name="C1" library="SparkFun-Capacitors" package="0805" value="1uF" x="18.1558" y="27.8426" smashed="yes" rot="R270">
 <attribute name="MPN" value="CC0805KKX7R7BB105" x="18.1558" y="27.8426" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="17.7524" y="25.5703" size="0.6096" layer="25" font="vector"/>
+<attribute name="NAME" x="17.4984" y="25.5703" size="0.6096" layer="25" font="vector"/>
 </element>
 <element name="C6" library="SparkFun-Capacitors" package="0805" value="1uF" x="24.3674" y="30.5942" smashed="yes" rot="R90">
 <attribute name="MPN" value="CC0805KKX7R7BB105" x="24.3674" y="30.5942" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="24.9318" y="32.7399" size="0.6096" layer="25" font="vector" rot="R180"/>
+<attribute name="NAME" x="23.3419" y="29.9322" size="0.6096" layer="25" font="vector" rot="R90"/>
 </element>
 <element name="RX" library="adafruit" package="CHIPLED_0805" value="Yellow" x="19.4596" y="49.6314" smashed="yes" rot="R90">
 <attribute name="MPN" value="LG R971-KN-1" x="19.4596" y="49.6314" size="1.778" layer="27" rot="R90" display="off"/>
@@ -1299,13 +1299,13 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <attribute name="PROD_ID" value="CONN-13711" x="28.6" y="47.7" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="U$4" library="headers(2mm)" package="1X7" value="1X7" x="55.118" y="11.303" rot="R90"/>
-<element name="U10" library="TSL2591" package="DFN6_TAOS" value="TSL2591" x="11.43" y="17.018" smashed="yes">
-<attribute name="MPN" value="TSL25911FN " x="11.43" y="17.018" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="10.16" y="18.642" size="0.6096" layer="25" font="vector"/>
+<element name="U10" library="TSL2591" package="DFN6_TAOS" value="TSL2591" x="11.43" y="15.494" smashed="yes">
+<attribute name="MPN" value="TSL25911FN " x="11.43" y="15.494" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="10.16" y="17.118" size="0.6096" layer="25" font="vector"/>
 </element>
-<element name="C4" library="Adafruit Feather 32u4 Bluefruit LE" package="MICROBUILDER__0402MP" value="0.1uF" x="13.97" y="17.526" smashed="yes" rot="R270">
-<attribute name="MPN" value="GRM155R71C104KA88J" x="13.97" y="17.526" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="14.9543" y="18.161" size="0.6096" layer="25" font="vector" rot="R270"/>
+<element name="C4" library="Adafruit Feather 32u4 Bluefruit LE" package="MICROBUILDER__0402MP" value="0.1uF" x="13.97" y="16.002" smashed="yes" rot="R270">
+<attribute name="MPN" value="GRM155R71C104KA88J" x="13.97" y="16.002" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="NAME" x="14.9543" y="16.637" size="0.6096" layer="25" font="vector" rot="R270"/>
 </element>
 </elements>
 <signals>
@@ -1514,11 +1514,11 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="25.252" y1="20.804" x2="25.252" y2="18.8032" width="0.3048" layer="1"/>
 <contactref element="C4" pad="2"/>
 <contactref element="U10" pad="5"/>
-<wire x1="12.23" y1="17.018" x2="13.97" y2="17.018" width="0.254" layer="1"/>
-<wire x1="18.228" y1="15.046" x2="16.256" y2="17.018" width="0.254" layer="1"/>
-<wire x1="18.228" y1="7.6" x2="18.228" y2="15.046" width="0.254" layer="1"/>
+<wire x1="12.23" y1="15.494" x2="13.97" y2="15.494" width="0.254" layer="1"/>
+<wire x1="13.97" y1="15.494" x2="15.24" y2="15.494" width="0.254" layer="1"/>
+<wire x1="18.228" y1="12.506" x2="15.24" y2="15.494" width="0.254" layer="1"/>
+<wire x1="18.228" y1="7.6" x2="18.228" y2="12.506" width="0.254" layer="1"/>
 <wire x1="25.252" y1="18.308" x2="25.252" y2="18.8032" width="0.3048" layer="1"/>
-<wire x1="16.256" y1="17.018" x2="13.97" y2="17.018" width="0.254" layer="1"/>
 </signal>
 <signal name="SCL">
 <contactref element="U7" pad="P$4"/>
@@ -1537,9 +1537,9 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="26.543" y1="15.113" x2="26.543" y2="18.7942" width="0.254" layer="1"/>
 <wire x1="26.543" y1="18.7942" x2="26.552" y2="18.8032" width="0.254" layer="1"/>
 <contactref element="U10" pad="1"/>
-<wire x1="10.63" y1="17.668" x2="10.63" y2="18.504" width="0.254" layer="1"/>
-<wire x1="10.63" y1="18.504" x2="11.43" y2="19.304" width="0.254" layer="1"/>
-<wire x1="11.43" y1="19.304" x2="18.288" y2="19.304" width="0.254" layer="1"/>
+<wire x1="10.63" y1="16.144" x2="10.63" y2="16.472" width="0.254" layer="1"/>
+<wire x1="10.63" y1="16.472" x2="13.462" y2="19.304" width="0.254" layer="1"/>
+<wire x1="13.462" y1="19.304" x2="18.288" y2="19.304" width="0.254" layer="1"/>
 <via x="18.288" y="19.304" extent="1-16" drill="0.35"/>
 <wire x1="18.288" y1="19.304" x2="21.082" y2="19.304" width="0.254" layer="16"/>
 <via x="21.082" y="19.304" extent="1-16" drill="0.35"/>
@@ -1568,12 +1568,11 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="25.529" y1="22.1" x2="19.1135" y2="15.6845" width="0.254" layer="16"/>
 <contactref element="U10" pad="6"/>
 <wire x1="19.1135" y1="15.6845" x2="15.028" y2="11.599" width="0.254" layer="16"/>
-<wire x1="12.23" y1="17.668" x2="12.23" y2="18.326" width="0.254" layer="1"/>
-<wire x1="12.23" y1="18.326" x2="12.7" y2="18.796" width="0.254" layer="1"/>
-<wire x1="12.7" y1="18.796" x2="17.526" y2="18.796" width="0.254" layer="1"/>
-<wire x1="17.526" y1="18.796" x2="19.1135" y2="17.2085" width="0.254" layer="1"/>
+<wire x1="12.23" y1="16.144" x2="12.23" y2="16.802" width="0.254" layer="1"/>
+<wire x1="12.23" y1="16.802" x2="13.462" y2="18.034" width="0.254" layer="1"/>
+<wire x1="13.462" y1="18.034" x2="16.764" y2="18.034" width="0.254" layer="1"/>
+<wire x1="16.764" y1="18.034" x2="19.1135" y2="15.6845" width="0.254" layer="1"/>
 <via x="19.1135" y="15.6845" extent="1-16" drill="0.35"/>
-<wire x1="19.1135" y1="17.2085" x2="19.1135" y2="15.6845" width="0.254" layer="1"/>
 </signal>
 <signal name="N$4">
 <contactref element="U1" pad="8"/>
